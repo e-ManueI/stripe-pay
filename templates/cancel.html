@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>400 - Payment Error</title>
+{% endblock title %}
+{% block content %}
+    <div class="h-screen bg-gray-50 flex overflow-x-hidden">
+        <div class="container flex flex-col md:flex-row items-center justify-around px-5 text-gray-700 m-auto mt-16">
+            <div class="w-full lg:flex lg:justify-start lg:w-1/2 mx-5">
+                <img src="https://user-images.githubusercontent.com/43953425/166269493-acd08ccb-4df3-4474-95c7-ad1034d3c070.svg" class="" alt="Page not found">
+            </div>
+            <div class="w-full lg:w-1/2 ml-16">
+                <div class="text-7xl text-blue-600 font-dark font-extrabold mb-8">
+                    400
+                </div>
+                <p class="text-2xl md:text-3xl font-light leading-normal mb-8">
+                    Forgot to add something to your cart?
+                </p>
+                <a href="{% url 'landing' %}" class="px-5 inline py-3 text-lg font-medium leading-5 shadow-2xl text-white transition-all duration-400 border border-transparent rounded-lg focus:outline-none bg-blue-500 active:bg-blue-600 hover:bg-blue-400">
+                    Try again
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block tags %}
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+{% endblock %}
+
+{% block content %}
+    <section class="h-screen bg-slate-50 py-8">
+        <!-- component -->
+        <div class="lg:flex items-center justify-between h-[500px] mx-6 rounded-md shadow shadow-gray-400">
+            <div class="lg:w-1/2 w-full p-2 m-2 line-s">
+                <p class="md:text-5xl text-3xl leading-4 text-gray-800 font-bold leading-10 mb-2 -mt-10">{{ product.name }}</p>
+                <p role="contentinfo" class="text-base font-semibold leading-7 mt-5 text-gray-600 text-justify">We’re working on a suit of educational products to make studying easier and flexible for students and everyone. We can’t wait to hear what you think</p>
+            </div>
+            <div class="xl:w-1/2 lg:w-7/12 relative w-full lg:mt-0 mt-12 md:px-8 md:py-4" role="list">
+                <img src="https://i.ibb.co/0n6DSS3/bgimg.png" class="absolute opacity-50 w-full -ml-12 mt-24" alt="background circle images" />
+                
+                {% for price in prices %}
+                <div role="listitem" class="bg-white cursor-pointer shadow rounded-lg mt-3 flex relative z-30 m-auto">
+                    <div class="w-2.5 h-auto bg-blue-400 rounded-tl-md rounded-bl-md"></div>
+                    <div class="w-full p-8">
+                        <div class="md:flex items-center justify-between border-b-2 border-blue-200">
+                            <h2 class="text-2xl font-semibold leading-10 md:text-3xl text-gray-800">{{ price.stripe_price_desc}}</h2>
+                            <p class="text-2xl md:mt-0 mt-4 font-bold leading-6 text-gray-800"><span class="text-xl md:text-2xl font-bold">$ {{ price.get_display_price }}</span></p>
+                        </div>
+                        <div class="flex flex col justify-between">
+                            <p class="md:w-80 text-base leading-6 mt-4 text-gray-600 text-justify">{{ price.stripe_package }}</p>
+                            <form action="{% url 'create-checkout-session' price.id %}" method="POST">
+                                {% csrf_token %}
+                                <button class="bg-gradient-to-r from-cyan-300 to-blue-400 hover:from-pink-300 hover:to-yellow-300 hover:text-gray-900 shadow rounded-full flex items-center mt-10 rounded-full px-6 py-2 font-normal text-xl " type="submit">
+                                    Checkout
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </section>
+{% endblock %}
