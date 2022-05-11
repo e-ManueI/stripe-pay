@@ -144,4 +144,7 @@ db.sqlite3-journal
 templates/dump.html
 stripe.exe
 container/settings.py
+<<<<<<< HEAD
 container/settings.py
+=======
+>>>>>>> 6241581310246fce0144be20b8f65724ef5cea3d
