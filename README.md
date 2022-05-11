@@ -10,10 +10,6 @@ Payment processing and gateway in Django using Stripe
 Facing problems?
 [click here](https://www.appinvoice.com/en/s/documentation/how-to-get-stripe-publishable-key-and-secret-key-23) or  [here(official documentation)](https://stripe.com/docs/keys) to learn more.
 
-<<<<<<< HEAD
 4. When required, the stripe CLI is installed manually into the root directory to activate stripe webhooks (listening ports). Check this [here](https://stripe.com/docs/webhooks).
 
 5. Styled using [Tailwind CSS](https://tailwindcss.com/). 
-=======
-4. When required, the stripe CLI is installed manually into the root directory to activate stripe webhooks (listening ports). Check this [here](https://stripe.com/docs/webhooks).
->>>>>>> 6241581310246fce0144be20b8f65724ef5cea3d
