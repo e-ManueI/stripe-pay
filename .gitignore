@@ -143,3 +143,5 @@ db.sqlite3
 db.sqlite3-journal
 templates/dump.html
 stripe.exe
+container/settings.py
+container/settings.py
