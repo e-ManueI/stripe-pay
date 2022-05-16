@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-cdrvzgn%0iyhj=fbz@f*qhma@*4=dfdds3&&fu$uv(@co#+#4hub&_9'
+SECRET_KEY = 'django-insecure-cdrvzgn%0j=dd4^23fbz@f*qhma@*4=3&&fu$uv(@co#+#4hub&_9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -124,7 +124,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STRIPE_PUBLIC_KEY = "pk_test_51KxA4GH71xvQhiC4nkYMcwtsggMDw174N0jMvHZAi5McK3khppaJ1p8V8lxtpK40f0TDcuAfDIJeggI4KReAjcCX00JlIyWs0p"
-STRIPE_SECRET_KEY = "sk_test_51KxA4GH71xvQhiC4D60R5Pjn57ZJXuQ4n4E3xeLAZdaMti5Dhd1ipxrYe7hlt3WzWEvat4OxOcrT7lpE8RVbXDbU00zsagyDAV"
+STRIPE_PUBLIC_KEY = "pk_test_51KxA4GH71xvQhiC4RFtOrm13w3lPpaK3vMluI84aAtrPym3OHPRXwMB1Di9jeaIK323HKjb2WbTcz6LstULxFPfR006dnvo2ed"
+STRIPE_SECRET_KEY = "sk_test_51KxA4GH71xvQhiC4vuxFHwWWV1iLxUmYF00jY99IYHExVJ9iZBttMjQmDypt9ul9PVy8Wa8mYGimmiqb4NhGhTlJ002NS8Vxni"
 
 STRIPE_WEBHOOK_SECRET = "whsec_b0198a819271a48d893496a5aaeaeb65dd03b4d21b1c4ee27c2cfddc635e53ec"

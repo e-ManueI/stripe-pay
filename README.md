@@ -2,7 +2,7 @@
 Payment processing and gateway in Django using Stripe
 
 ### REQUIREMENT:
-1. Clone the repository. Virtual environment using PIPENV is suitable for this project to install Django.
+1. Clone the repository. Virtual environment using PIPENV was suitable for this project to install Django.
 
 2. A test account at [stripe](dashboard.stripe.com) is required.
 
